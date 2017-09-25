@@ -20,6 +20,7 @@ import { HomeComponent, ProductTileComponent } from './home';
 import { ProductComponent, ProductDetailsComponent } from './product';
 import { routes } from './app.routing';
 import { CartComponent, CartResolver } from './cart';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CartComponent, CartResolver } from './cart';
     ProductTileComponent,
     ProductComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
