@@ -1,19 +1,22 @@
 import { HttpClientModule } from '@angular/common/http';
-import { ProductService } from './shared/services';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MdToolbarModule, MdGridListModule } from '@angular/material';
 
+import { ProductService } from './shared/services';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     MdToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MdGridListModule
   ],
   providers: [
     ProductService
