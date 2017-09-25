@@ -5,12 +5,13 @@ import { MdToolbarModule, MdGridListModule } from '@angular/material';
 
 import { ProductService } from './shared/services';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home';
+import { HomeComponent, ProductTileComponent } from './home';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ProductTileComponent
   ],
   imports: [
     BrowserModule,
