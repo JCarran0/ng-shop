@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent, ProductTileComponent } from './home';
 import { ProductComponent, ProductDetailsComponent } from './product';
 import { routes } from './app.routing';
+import { CartComponent, CartResolver } from './cart';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { routes } from './app.routing';
     HomeComponent,
     ProductTileComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { routes } from './app.routing';
   ],
   providers: [
     ProductService,
-    ShoppingCartService
+    ShoppingCartService,
+    CartResolver
   ],
   bootstrap: [AppComponent]
 })
