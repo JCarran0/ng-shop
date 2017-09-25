@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   MdToolbarModule,
   MdGridListModule,
@@ -11,12 +12,15 @@ import {
 import { ProductService } from './shared/services';
 import { AppComponent } from './app.component';
 import { HomeComponent, ProductTileComponent } from './home';
+import { ProductComponent } from './product';
+import { routes } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductTileComponent
+    ProductTileComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { HomeComponent, ProductTileComponent } from './home';
     MdGridListModule,
     MdToolbarModule,
     BrowserAnimationsModule,
-    MdTabsModule
+    MdTabsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     ProductService
