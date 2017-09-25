@@ -13,7 +13,7 @@ import {
   MdIconModule
 } from '@angular/material';
 
-import { ProductService } from './shared/services';
+import { ProductService, ShoppingCartService } from './shared/services';
 import { AppComponent } from './app.component';
 import { HomeComponent, ProductTileComponent } from './home';
 import { ProductComponent, ProductDetailsComponent } from './product';
@@ -42,7 +42,8 @@ import { routes } from './app.routing';
     MdIconModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
