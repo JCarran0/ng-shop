@@ -13,6 +13,10 @@ export class ProductService {
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>('/data/products/all.json');
   }
+
+  getCategory(category: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`/data/products/${category}.json`);
+  }
 }
 
 export interface Product {
