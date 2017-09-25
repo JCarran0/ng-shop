@@ -1,4 +1,4 @@
-import { ProductService } from './shared/services';
+import { ProductService, ShoppingCartService } from './shared/services';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(
+    private shoppingCartService: ShoppingCartService
+  ) { }
+
+  get cartTotalQuantity(): number {
+    // null removes attribute from the element, so the badge is not displayed.
+    return this.shoppingCartService.totalQuantity || null;
+  }
 }
