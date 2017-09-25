@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../shared/services';
+import { Product, ShoppingCartService } from '../../shared/services';
 
 @Component({
   selector: 'ngs-product-details',
@@ -11,8 +11,12 @@ export class ProductDetailsComponent implements OnInit {
   @Input() product: Product;
   quantity: number;  // we'll use it later for the shopping cart
 
+  constructor(
+    private shoppingCartService: ShoppingCartService
+  ) { }
+
   addItems() {
-    console.log(`Quantity: ${this.quantity}`);
+    this.shoppingCartService.addItem(this.product.id, this.quantity);
     this.quantity = null; // Reset selected number of items.
   }
 

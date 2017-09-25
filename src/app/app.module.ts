@@ -10,7 +10,8 @@ import {
   MdTabsModule,
   MdButtonModule,
   MdSelectModule,
-  MdIconModule
+  MdIconModule,
+  MdInputModule
 } from '@angular/material';
 
 import { ProductService, ShoppingCartService } from './shared/services';
@@ -41,7 +42,8 @@ import { CartComponent, CartResolver } from './cart';
     FormsModule,
     MdButtonModule,
     MdSelectModule,
-    MdIconModule
+    MdIconModule,
+    MdInputModule
   ],
   providers: [
     ProductService,
