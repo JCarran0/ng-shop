@@ -1,3 +1,4 @@
+import { ProductService } from './shared/services';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngs';
+
+
+  constructor(
+    productService: ProductService
+  ) {
+    productService.getAll()
+      .subscribe(products => console.log(products));
+  }
+
+
 }

@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './shared/services';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MdToolbarModule } from '@angular/material';
@@ -10,9 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    MdToolbarModule
+    MdToolbarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
